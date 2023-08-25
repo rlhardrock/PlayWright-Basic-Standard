@@ -2,7 +2,8 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from './pages/LoginPage';
 
 test('T6 - EtE loading the cart with POM', async ({ page }) => {
-    await page.goto('https://www.saucedemo.com/v1/');
+    // await page.goto('https://www.saucedemo.com/v1/');
+    await page.goto(process.env.URL_MAIN);
 
     // invocar el constructor "page"
     const LogIn = new LoginPage(page);
